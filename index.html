@@ -1,98 +1,255 @@
-<!DOCTYPE html>
-<!---<html lang="en" dir="ltr">/--->
-<html>
-
-
+﻿<!DOCTYPE html>
+<html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <title>Carl Dolce Site Personnel</title>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-sclabble=no" />
+    <title> Port-Folio de Carl</title>
+    <link rel="stylesheet" href="Css_Fichier.css" />
+    <script src="JavaS_Fichier.js" async></script>
+    <link rel="icon" href="dolcecarl.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Open+Sans:ital,wght@0,300;1,300&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+   
 </head>
-<table cellspacing="20">
-
-
-<tr>
-<td> <img src="DOLCE CARL.png" alt="CARL Phote De Profile"> </td>
-    <td>
-      <h1>CARL DOLCE</h1>
-      <p><em>Etudiant en<strong> Génie Logiciel à <a href="https://www.etsmtl.ca"> Ecole De Technologie Supérieurerp(ETS)</a> </strong></em></p>
-      <p>Je suis un étudiant en Génie Logiciel,
-        passionné de la programmation et du developpement Web.Je suis prêt à relever de nouveaux défis.Et à
-        mettre en valeur mes compétences et mon savoir-faire acquis tout au long de mes différents cheminements scolaires,
-        à travers des travaux pratiques, des projets de fin de session et des séances de laboratoire et en stage. </p>
-    </td>
-  </tr>
-</table>
-
 <body>
+    <!--! ***MENU_HEADER***-->
+    <div id="Container_Menu">
+        <span id="profile_Name">Carl </span>
+        <header>
+
+            <nav>
+                <ul>
+                    <li><a href="#Etudes">Etudes</a></li>
+                    <li><a href="#Expérience">Expériences professionnelles</a></li>
+                    <li><a href="#Compétences">Competences</a></li>
+                    <li><a href="#Contacts">Contacts</a></li>
+                    
+                </ul>
+            </nav>
+        </header>
+
+    </div>
+
+    <!--Section Picture profile-->
+    <section>
+        <div id="container_PrincipalePicture">
+            <div class="Container_Picture">
+
+                <div>
+                    <!--</div> id="Container_Picture_Presentation">-->
+
+                    <span id="nom">  Carl Dolce<br></span>
+                    <span id="font_programmeur"> <strong>Programmeur Front-End</strong> </span>
+                    <div class="bouton_Message">
+                        <div id="position_BoutonMessage"> <a href="#Contacts" id="Lien_BoutonMessage"><span>Message</span></a></div>
+
+                        <div id="position_IconMessage"> <i><img src="Images/icons8.png" alt="" /></i></div>
+
+                    </div>
+                </div>
+
+                <div>
+                    <!--class="Container_Picture_PicProfile">-->
+                    <figure>
+                        <img src="Images/CarlDolce_3.png" id="image" title="Photo de Carl" alt="" />
+
+                    </figure>
+                    <button id="Bouton_sombre"><!--<a href="#Logo">--><img src="Images/icons8_waning_gibbous_24px.png" alt="" class="icon-darkMode" onclick="turnToDark()" />Mode sombre
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--MAIN-->
+    <!--INTRODUCTION-->
+    <section>
+        <div class="container_Paragraphe_Introduction">
+            <!-- <h1 id="couleur_h1">Dolce Carl</h1>-->
+            <p class="Paragraphe_introduction">
+                <em>
+                    Etudiant en <strong>
+                        programmation orientée objet et technologie web au
+                        <a href="http://www.crosemont.qc.ca" title="Site du Collège Rosemont" target="_blank" id="Cegep_Lien">
+                            Cegep de Rosemont.<br>
+                        </a>
+                    </strong>
+                </em>
+                Je suis un étudiant en technique de l'informatique,
+                passionné
+                de la programmation
+                et du développement Web. Je suis prêt à relever de nouveaux défis. Et à mettre
+                en valeur mes compétences et mon savoir-faire acquis
+                tout au long de mes différents cheminements scolaires,
+                à travers des travaux pratiques,
+                des projets de fin de session
+                et des séances de laboratoire et en stage.
+            </p>
+        </div>
+        <div class="Container_CV">
+            <span id="About_me"> A propos de moi<br></span>
+            <div class="cv">
+                <a href="Documents/Dolce_CV.docx" download>Télécharger mon CV</a>
+                <img src="Images/icons_download.png" id="icon_chevron_right" alt="" />
+            </div>
+        </div>
+    </section>
+    <!--bouton SCROLL TO TOP-->
+    <button class="button_scroll_To_Top"><i class="material-icons">arrow_upward</i></button>
+    <!--Section ETUDE ET EMPLOI-->
+    <section>
+        <div class="Container_Etude_Emploi">
+            <div class="Container_etudes">
+                <h1 id="Etudes"> Etudes</h1>
+            </div>
+            <div class="Container_experience">
+                <h1 id="Expérience"> Expérience Professionnelle</h1>
+            </div>
+
+        </div>
+        <!--**********TIMELINE**************-->
+        <div class="Position_Center_Timeline">
+            <div class="Container_Timeline">
 
 
-  <hr>
-  <H3>ETUDES</H3>
-  <ul>
-    <li> Génie Logiciel à Ecole De Technologie Supérieure(ETS) 2019</li>
-    <li> Techinque Informatique à Ecole Supérieure D'Infotronique D'Haiti 2008-2011</li>
+                <ul class="timeline">
 
-  </ul>
-  <hr>
-  <h3>Expérience De Travail</h3>
-  <table cellspacing="10">
-    <thead>
-      <tr>
-        <th> DATE</th>
-        <th>FONCTIONS</th>
-      </tr>
+                    <!-- Item 1 -->
+                    <li>
+                        <div class="direction-r Employeur_Horizon">
+                            <div class="flag-wrapper">
+                                <span class="flag">Support Technique</span>
+                                <span class="time-wrapper"><span class="time">2017 - 2019</span></span>
+                            </div>
+                            <div class="desc">CDN Horizon, Laval</div>
+                        </div>
+                    </li>
 
-    </thead>
-    <tbody>
-      <tr>
-         <td>2017</td>
-        <td><em>Préposé Aux Bénéficiaires au</em> <strong> CISSS Nord De L'Ile de Montréal</strong> </td>
+                    <!-- Item 2 -->
+                    <li>
+                        <div class="direction-l">
+                            <div class="flag-wrapper">
+                                <span class="flag">Informatique de gestion</span>
+                                <span class="time-wrapper"><span class="time">2020 - Présent</span></span>
+                            </div>
+                            <div class="desc"> Cegep Rosemont,Montréal.<br>Programmation Orientée Objet et Technologie web.</div>
+                        </div>
+                    </li>
 
-      </tr>
-      <tr>
-        <td>Mai 2016 - Aout 2016 </td>
-        <td><em>Soutien technique à</em> <strong>Utopia Image</strong></td>
+                    <!-- Item 3 -->
+                    <li>
+                        <div class="direction-r Employeur_Videotron">
+                            <div class="flag-wrapper">
+                                <span class="flag">Support Technique</span>
+                                <span class="time-wrapper"><span class="time">2015 - 2016</span></span>
+                            </div>
+                            <div class="desc">Vidéotron,Laval</div>
+                        </div>
+                    </li>
 
-      </tr>
-      <tr>
-        <td> Février 2014 - Juin 2014</td>
-        <td><em>Représentant Service à la Clientèle à</em> <strong>HD Direct Telecom</strong></td>
+                    <!-- Item 4 -->
+                    <li>
+                        <div class="direction-l Ecole_Infotronique">
+                            <div class="flag-wrapper">
+                                <span class="flag">Techniques Informatiques</span>
+                                <span class="time-wrapper"><span class="time">2008 - 2011</span></span>
+                            </div>
+                            <div class="desc">Ecole Supérieure D'Infotronique D'Haiti,Haiti</div>
+                        </div>
+                    </li>
 
-      </tr>
-    </tbody>
-</table>
-<hr>
-  <h3> Compétences</h3>
-  <table cellspacing="10">
-
-<tr>
-  <td>JAVA</td>
-  <td>⭐⭐</td>
-</tr>
-<tr>
-<td>HTML</td>
-<td>⭐⭐⭐</td>
-</tr>
-
-<tr>
-  <td>CSS</td>
-  <td>⭐⭐</td>
-</tr>
-<tr>
-  <td>JAVASCRIPT</td>
-  <td>⭐</td>
-</tr>
-
-
-</table>
-<hr>
-<h3>Intérêts</h3>
-
-  <a href="Mes Intérêts.html">Mes Intérêts</a>
-  <a href="Contactez-moi.html">Contactez-moi</a>
+                    <!-- Item 6 -->
+                    <li>
+                        <div class="direction-r Employeur_Bell">
+                            <div class="flag-wrapper">
+                                <span class="flag">Support Technique</span>
+                                <span class="time-wrapper"><span class="time">Février-Juin 2014</span></span>
+                            </div>
+                            <div class="desc">Bell,Montréal</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
 
+    </section>
+    <!--**************FIN TIMELINE**************-->
+    <!--Section Competences-->
+    <div id="Font_Header-Competence">
+        <h1 id="Compétences" >Mes compétences</h1="Compétences">
+    </div>
+
+    <section>
+ <div class="Position-left_container competence">
+        <div class="Container_Principale_Competence">
+            <div>
+
+                <div class="container_logo">
+                    <h2> Java</h2>
+                    <hr id="horizontal_line_C_charp">
+                    <img src="Images/java.png" />
+                </div>
+                
+
+            </div>
+            <div>
+
+                <div class="container_logo">
+                    <h2> C#</h2>
+                    <hr id="horizontal_line_C_charp">
+                    <img src="Images/C_sharp.png" />
+                </div>
+          
+
+            </div>
+            <div>
+                <div class="container_logo">
+                    <h2> C++</h2>
+                    <hr id="horizontal_line_cplus">
+                    <img src="Images/C.png" />
+                </div>
+            </div>   
+            <div>
+                <div class="container_logo">
+                    <h2>  Android</h2>
+                    <hr id="horizontal_line_android">
+                    <img src="Images/Android.png" />
+                </div>
+                
+            </div>
+            <div>
+                <div class="container_logo">
+                    <h2> Html</h2>
+                    <hr id="horizontal_line_html">
+                    <img src="Images/html.png" />
+                </div>
+                
+            </div>
+            <div>
+                <div class="container_logo">
+                    <h2> Css</h2>
+                    <hr id="horizontal_line_css">
+                    <img src="Images/css.png" />
+                </div>
+                
+            </div>
+            <div>
+                <div class="container_logo">
+                    <h2> Js</h2>
+                    <hr id="horizontal_line_js">
+                    <img src="Images/js.png" />
+                </div>
+                
+            </div>
+            </div>
+        </div>
+       
+    
+    </section>
 </body>
-
 </html>
