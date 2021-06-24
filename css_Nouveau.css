@@ -1,10 +1,9 @@
 ﻿body {
-
-    font-family:'source code pro',sans-serif;
-    background-color:powderblue;
+    font-family: 'source code pro',sans-serif;
+    background-color: #F0D9E7;
     font-size:16px;
-    font-weight:400;
-    line-height:1.5;
+    font-weight: 400;
+    line-height: 1.5;
 }
 *{
     margin:0;
@@ -76,6 +75,9 @@ header nav span {
     outline-color:azure;
     opacity:.7;
     border:2px solid #b200ff/*#0094ff*/;
+    }
+    .container .logo_social a {
+        color: #732BC0;
     }
     .container .logo_social a:hover {
         background-color: aliceblue;
@@ -840,7 +842,22 @@ hr {
 }
 /*FIN SECTION CONTACT*/
 
-
+.button_scroll_To_Top {
+    position: fixed;
+    right: 10px;
+    bottom: 70px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px #000, 0px 0px 30px #777;
+    background-color: #732BC0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: powderblue;
+    opacity: 1;
+    display: none;
+}
 
 
 
