@@ -17,6 +17,18 @@ button_scroll.addEventListener('click', () => {
     })
 })
 
+/*Display Hamburger menu*/
+
+function displayMenuOnMediaScreenMode() {
+    let myDiv = document.getElementById("Container_Menu");
+    if (myDiv.style.display === "none") {
+        myDiv.style.display = "block";
+    } else {
+        myDiv.style.display = "none";
+    }
+}
+
+
 /********DARK MODE METHODE*************/
 function turnToDark() {
     let element = document.body;
@@ -24,25 +36,25 @@ function turnToDark() {
 }
 /* display on scroll*/
 
-/*windows.addEventListener('scroll', reveal)
+// windows.addEventListener('scroll', reveal)
 
-function reval() {
+// function reval() {
 
-    let reveals = document.querySelectorAll('.reveal');
+//     let reveals = document.querySelectorAll('.reveal');
 
-    for (let i = 0; i < reveals.length; i++) {
-        let windowsheight = windows.innerHeight;
-        let revealTop = reveals[i].getBoundingClientRect.top;
-        let revealPoint = 150;
+//     for (let i = 0; i < reveals.length; i++) {
+//         let windowsheight = windows.innerHeight;
+//         let revealTop = reveals[i].getBoundingClientRect.top;
+//         let revealPoint = 150;
 
-        if (revealTop < windowsheight - revealPoint) {
-            reveals[i].classList.add('active');
-        }
-        else {
-            reveals[i].classList.remove('active')
-        }
-    }
-}*/
+//         if (revealTop < windowsheight - revealPoint) {
+//             reveals[i].classList.add('active');
+//         }
+//         else {
+//             reveals[i].classList.remove('active')
+//         }
+//     }
+// }
 
 
 /********HIDE NAV BAR*************/
@@ -68,3 +80,170 @@ window.onscroll = function () {
     }
     prevScrollpos = currentScrollPos;
 }
+
+
+             // Form validation nom utilisateur
+
+function displayErreurInput() {
+
+    document.getElementById("message_Erreur").style.color='red';
+    
+    if(!document.myForm.nom.focus()){
+
+        if(validerAllLettersInput(myForm.nom)==false){
+
+            document.getElementById("message_Erreur").innerHTML+='Oups!Votre nom ou adresse courriel n\'est pas valide';
+            document.myForm.nom.value="";
+            document.getElementById("colorOnFocus").style.borderBottomColor="black";
+        }
+        return true;
+    }
+    // else{
+    //     document.myForm.nom.focus();
+    //     document.getElementById("message_Erreur").innerHTML=" ";
+    // }
+    
+}
+
+
+                       // fonction Valider message erreur textarea
+
+                       function validateMessage(){
+                           
+                        document.getElementById("message").style.color='red';
+                        if(!document.myForm.txtarea.focus()){
+
+                            if(validerAllLettersInput(myForm.txtarea)==false){
+                    
+                                document.getElementById("message").innerHTML+='Oups!Votre message n\'est pas valide';
+                                document.myForm.txtarea.value="";
+                                document.getElementById("colorOnFocus").style.borderBottomColor="black";
+                            }
+                            return true;
+                        }
+                        // else{
+                        //     document.myForm.txtarea.focus();
+                        //     document.getElementById("message_Erreur").innerHTML=" ";
+                        // }
+                       }
+                      
+
+
+                   // message erreur input email adress
+      function displayErrorEmailInput(){
+        document.getElementById("erreur_Mail").style.color='red';
+        if(!document.myForm.email.focus()){
+          
+          if( ValidateEmail(myForm.email)==false){
+
+            document.getElementById("erreur_Mail").innerHTML+='Oups!Votre  adresse courriel n\'est pas valide';
+            document.myForm.email.value="";
+            document.getElementById("erreur_Mail").style.borderBottomColor="black";
+          }
+            return true;
+        }
+        else{
+            document.getElementById("erreur_Mail").innerHTML=" ";
+        }
+
+    }
+    //   }
+                 // fonction submit
+                 
+                 function readySubmit(){
+
+                    if(confirm("Etes vous prêt à envoyer votre message?")){
+
+                       document.forms.myForm.submit();
+                    }
+                    else{
+                        return false;
+                    }
+                 }
+
+                 // fonction change color input on focus
+
+                 function changeColorInput(){
+
+                    document.getElementById("colorOnFocus").style.borderBottomColor="blue";
+                    document.getElementById("mail").style.borderBottomColor="blue";
+                    document.getElementById("message_Erreur").innerHTML+=" ";
+                 }
+
+
+                      // validate mailadress
+                      function ValidateEmail(input) {
+
+                        var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                      
+                        if (input.value.match(validRegex)) {
+                      
+                          
+                          return true;
+                      
+                        } else {
+                      
+                     
+                          return false;
+                      
+                        }
+                      
+                      }
+
+                    //   function emailIsValid (email) {
+                    //     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+                    //   }
+
+
+                //  function verifierEmail(forms){ // Validate the address
+                //     if(forms.email.value.indexOf("@") != -1 && 
+                //     forms.email.value.indexOf(".") != -1){
+                   
+                //      return true; 
+                //     } 
+                //     else {
+                        
+                //      return false; 
+                //     }
+                //     } 
+                 // vlidate mailadress
+
+                //  function validateEmail() {
+                //     var eEntered = document.getElementById("email").value;
+                //      var regex = /^[\w\-\.\+]+\@[a-zA-Z0-9\. \-]+\.[a-zA-z0-9]{2,4}$/;
+                //      if (!(eEntered.match(regex))) {
+                //         document.getElementById("message_Erreur").innerHTML+='Oups!Votre nom ou adresse courriel n\'est pas valide';
+                //      return false;
+                //      }
+                //      }
+
+
+
+                            // Validate alphabetic Characters
+
+                            function validerAllLettersInput(textField ){ 
+                                 if( textField.value.length != 0 ||textField.value.length==" "){
+                                 for (let i = 0; i < textField.value.length;i++){
+                                 let ch= textField.value.charAt(i);
+                                /* alert(ch); Using alert to see what characters
+                                are coming in
+                                */
+                                if((ch < "A" || ch > "Z") && (ch< "a" || ch >"z")){ 
+                                return false;
+                                } 
+                                }
+                                }
+                                else {
+                                     return true; 
+                                    }
+                                    } 
+
+
+                 // Swipe image on mousehover
+
+
+                 function swapPic() {
+                    let pic =document.getElementById("image");
+                    pic.src = "carldolce.png";
+                     }
+                    
