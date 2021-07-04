@@ -94,9 +94,13 @@ function displayErreurInput() {
 
             document.getElementById("message_Erreur").innerHTML+='Oups!Votre nom ou adresse courriel n\'est pas valide';
             document.myForm.nom.value="";
+            document.myForm.nom.focus();
             document.getElementById("colorOnFocus").style.borderBottomColor="black";
         }
-        return true;
+        else{
+            document.getElementById("message_Erreur").innerHTML="";
+            document.myForm.email.focus();
+        }
     }
     // else{
     //     document.myForm.nom.focus();
@@ -117,9 +121,13 @@ function displayErreurInput() {
                     
                                 document.getElementById("message").innerHTML+='Oups!Votre message n\'est pas valide';
                                 document.myForm.txtarea.value="";
+                                document.myForm.txtarea.focus();
                                 document.getElementById("colorOnFocus").style.borderBottomColor="black";
                             }
-                            return true;
+                            else{
+                                document.getElementById("message").innerHTML="";
+                               
+                            }
                         }
                         // else{
                         //     document.myForm.txtarea.focus();
@@ -134,25 +142,34 @@ function displayErreurInput() {
         document.getElementById("erreur_Mail").style.color='red';
         if(!document.myForm.email.focus()){
           
-          if( ValidateEmail(myForm.email)==false){
+          if(ValidateEmail(myForm.email)==false){
 
             document.getElementById("erreur_Mail").innerHTML+='Oups!Votre  adresse courriel n\'est pas valide';
             document.myForm.email.value="";
+            
+           
             document.getElementById("erreur_Mail").style.borderBottomColor="black";
           }
-            return true;
+          else{
+            document.getElementById("erreur_Mail").innerHTML="";
+            document.myForm.txtarea.focus();
         }
-        else{
-            document.getElementById("erreur_Mail").innerHTML=" ";
         }
+        
+        
 
     }
     //   }
                  // fonction submit
                  
                  function readySubmit(){
+                     
+                    if(document.myForm.nom.value=="" && document.myForm.email.value=="" && document.myForm.txtarea.value==""){
 
-                    if(confirm("Etes vous prêt à envoyer votre message?")){
+                        alert("Oups! Tous les champs doivent être remplis avant dénvoyer votre formulaire!");
+                    }
+                   
+                    else if(confirm("Etes vous prêt à envoyer votre message?")){
 
                        document.forms.myForm.submit();
                     }
@@ -165,9 +182,8 @@ function displayErreurInput() {
 
                  function changeColorInput(){
 
-                    document.getElementById("colorOnFocus").style.borderBottomColor="blue";
-                    document.getElementById("mail").style.borderBottomColor="blue";
-                    document.getElementById("message_Erreur").innerHTML+=" ";
+                    document.querySelector(".colorOnFocus").style.borderBottomColor="blue";
+                    
                  }
 
 
@@ -190,32 +206,7 @@ function displayErreurInput() {
                       
                       }
 
-                    //   function emailIsValid (email) {
-                    //     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
-                    //   }
-
-
-                //  function verifierEmail(forms){ // Validate the address
-                //     if(forms.email.value.indexOf("@") != -1 && 
-                //     forms.email.value.indexOf(".") != -1){
-                   
-                //      return true; 
-                //     } 
-                //     else {
-                        
-                //      return false; 
-                //     }
-                //     } 
-                 // vlidate mailadress
-
-                //  function validateEmail() {
-                //     var eEntered = document.getElementById("email").value;
-                //      var regex = /^[\w\-\.\+]+\@[a-zA-Z0-9\. \-]+\.[a-zA-z0-9]{2,4}$/;
-                //      if (!(eEntered.match(regex))) {
-                //         document.getElementById("message_Erreur").innerHTML+='Oups!Votre nom ou adresse courriel n\'est pas valide';
-                //      return false;
-                //      }
-                //      }
+                    
 
 
 
