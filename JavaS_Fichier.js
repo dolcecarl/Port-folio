@@ -117,7 +117,7 @@ function displayErreurInput() {
                         document.getElementById("message").style.color='red';
                         if(!document.myForm.txtarea.focus()){
 
-                            if(validerAllLettersInput(myForm.txtarea)==false){
+                            if(lettersandSpacesOnly(myForm.txtarea)==false ){
                     
                                 document.getElementById("message").innerHTML+='Oups!Votre message n\'est pas valide';
                                 document.myForm.txtarea.value="";
@@ -166,16 +166,20 @@ function displayErreurInput() {
                      
                     if(document.myForm.nom.value=="" && document.myForm.email.value=="" && document.myForm.txtarea.value==""){
 
-                        alert("Oups! Tous les champs doivent être remplis avant dénvoyer votre formulaire!");
+                        alert("Oups!"+" "+" "+ "Tous les champs doivent être remplis avant d\'envoyer votre formulaire!");
                     }
                    
-                    else if(confirm("Etes vous prêt à envoyer votre message?")){
+                    else {
 
-                       document.forms.myForm.submit();
-                    }
-                    else{
+                       let result=confirm(document.myForm.nom.value.toUpperCase()+","+" "+" "+"êtes vous prêt à envoyer votre message?");
+                       if(result){
+                        document.forms.myForm.submit();
+                       }
+                       else{
                         return false;
                     }
+                    }
+                    
                  }
 
                  // fonction change color input on focus
@@ -229,7 +233,19 @@ function displayErreurInput() {
                                     }
                                     } 
 
+                            // foncion alphanumeric and space 
 
+                            function lettersandSpacesOnly(input){
+                                let regexs = /[^a-z ]*$/gmi;
+                               if(input.value = input.value.replace(regexs, "")){
+
+                                return true;
+                               } 
+                               else{
+                                   return false;
+                               }
+                              }
+                            
                  // Swipe image on mousehover
 
 
