@@ -86,19 +86,19 @@ window.onscroll = function () {
 
 function displayErreurInput() {
 
-    document.getElementById("message_Erreur").style.color='red';
+    document.querySelector("#message_Erreur").style.color='red';
     
     if(!document.myForm.nom.focus()){
 
         if(validerAllLettersInput(myForm.nom)==false){
 
-            document.getElementById("message_Erreur").innerHTML+='Oups!Votre nom ou adresse courriel n\'est pas valide';
+            document.querySelector("#message_Erreur").innerHTML+='Oups!Votre nom  n\'est pas valide';
             document.myForm.nom.value="";
             document.myForm.nom.focus();
-            document.getElementById("colorOnFocus").style.borderBottomColor="black";
+            document.querySelector(".colorOnFocus").style.borderBottomColor="black";
         }
         else{
-            document.getElementById("message_Erreur").innerHTML="";
+            document.querySelector("#message_Erreur").innerHTML="";
             document.myForm.email.focus();
         }
     }
@@ -114,18 +114,18 @@ function displayErreurInput() {
 
                        function validateMessage(){
                            
-                        document.getElementById("message").style.color='red';
+                        document.querySelector("#message").style.color='red';
                         if(!document.myForm.txtarea.focus()){
 
                             if(lettersandSpacesOnly(myForm.txtarea)==false ){
                     
-                                document.getElementById("message").innerHTML+='Oups!Votre message n\'est pas valide';
+                                document.querySelector("#message").innerHTML+='Oups!Votre message n\'est pas valide';
                                 document.myForm.txtarea.value="";
                                 document.myForm.txtarea.focus();
-                                document.getElementById("colorOnFocus").style.borderBottomColor="black";
+                                document.querySelector(".colorOnFocus").style.borderBottomColor="black";
                             }
                             else{
-                                document.getElementById("message").innerHTML="";
+                                document.querySelector("#message").innerHTML="";
                                
                             }
                         }
@@ -139,19 +139,19 @@ function displayErreurInput() {
 
                    // message erreur input email adress
       function displayErrorEmailInput(){
-        document.getElementById("erreur_Mail").style.color='red';
+        document.querySelector("#erreur_Mail").style.color='red';
         if(!document.myForm.email.focus()){
           
           if(ValidateEmail(myForm.email)==false){
 
-            document.getElementById("erreur_Mail").innerHTML+='Oups!Votre  adresse courriel n\'est pas valide';
+            document.querySelector("#erreur_Mail").innerHTML+='Oups!Votre  adresse courriel n\'est pas valide';
             document.myForm.email.value="";
             
            
-            document.getElementById("erreur_Mail").style.borderBottomColor="black";
+            document.querySelector("#erreur_Mail").style.borderBottomColor="black";
           }
           else{
-            document.getElementById("erreur_Mail").innerHTML="";
+            document.querySelector("#erreur_Mail").innerHTML="";
             document.myForm.txtarea.focus();
         }
         }
@@ -163,13 +163,16 @@ function displayErreurInput() {
                  // fonction submit
                  
                  function readySubmit(){
-                     
+                    document.querySelector("#message").style.color='red';
+                     document.querySelector("#message").innerHTML="";
                     if(document.myForm.nom.value=="" && document.myForm.email.value=="" && document.myForm.txtarea.value==""){
 
-                        alert("Oups!"+" "+" "+ "Tous les champs doivent être remplis avant d\'envoyer votre formulaire!");
+                        
+                       return document.querySelector("#message").innerHTML+="Oups!"+" "+" "+ "Tous les champs doivent être remplis avant d\'envoyer votre formulaire!";;
                     }
                    
                     else {
+                       
 
                        let result=confirm(document.myForm.nom.value.toUpperCase()+","+" "+" "+"êtes vous prêt à envoyer votre message?");
                        if(result){
@@ -254,3 +257,11 @@ function displayErreurInput() {
                     pic.src = "carldolce.png";
                      }
                     
+
+                     //Fonction redirecct web page
+
+                     function goToMianPage(){
+
+
+                        location.replace("https//dolce-tech.com");
+                     }

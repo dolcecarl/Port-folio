@@ -133,7 +133,7 @@ header nav span {
     }
 
 .Image_Anglais {
-    background-image: url("/Images/carldolce.jpg");
+    background-image: url("/Images/Ca.jpg");
     background-color: #cccccc;
     height: 500px;
     background-position: center;
@@ -198,7 +198,7 @@ header nav span {
             }
 
            
-
+           
 
 .container .Container_Picture .dark_mode button {
     width: 25px;
@@ -265,7 +265,7 @@ header nav span {
 }
 
     .container .container_Paragraphe_Introduction .Paragraphe_introduction {
-        width: 60%;
+        width: 80%;
         margin: 0 auto;
         text-align: justify;
     }
@@ -273,6 +273,7 @@ header nav span {
 
         
         padding-right:15px;
+        
     }
         .container .container_Paragraphe_Introduction .Container_CV .About_me {
             font: bold;
@@ -964,7 +965,13 @@ hr {
   
 /*SECTION MEDIA QUERIES*/
 
-@media(max-width: 992px) {
+@media(max-width: 892px) {
+
+    body{
+
+        background-color: powderblue;
+        
+    }
 
     .Image_Anglais{
 
@@ -985,39 +992,74 @@ hr {
     }
             .container .Container_Picture {
                 display: flex;
-                width: 75%;
-            }
+                flex-direction: column;
+                width:30%;
+                position :relative;
+                right:50px;
+            }    
+            
+           
 
         .container .Container_Picture .profession {
             display: flex;
+            flex-direction: column;
             position: relative;
             left: 93px;
             font-size: 10px;
             top: 15px;
+            margin-bottom: 85px;
         }
 
-          
+        
 
             .version_Anglais button{
                 color:#fff;
             }
             .container .Container_Picture .profession .bouton_Message {
                 width: 180px;
+                
+                
+               
+            }
+
+            .container .Container_Picture .dark_mode #Bouton_sombre{
+
+                display:true;
+            }
+           
+            .dark{
+                display:none;
             }
 
     .container .container_Paragraphe_Introduction {
-        width: 120%;
+        width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+    .container .container_Paragraphe_Introduction p {
+
+        color:darkmagenta;
+        font:bold;
+        font-size:18px ;
+        text-decoration: none;
+     }
+    .container .container_Paragraphe_Introduction .Container_CV{
+
+        position:relative;
+       left:0px;
+        margin:10px;
+    
+    }
+
 
         .container .container_Paragraphe_Introduction .Container_CV .About_me {
             font-size: 26px;
             font: bolder;
         }
 
+       
         .container .container_Paragraphe_Introduction .cv {
             width: 100px;
             margin: 25px auto;
@@ -1048,6 +1090,7 @@ hr {
         font-weight: 400;
         font-size: 16px;
         position: relative;
+        color:#fff;
     }
 
         nav a:hover {
@@ -1064,7 +1107,9 @@ hr {
         justify-content: start;
         position: relative;
         float: left;
-        background-color: #F6C6EA;
+        background-color: #732BC0;
+        
+    
     }
 
     #profile_Name {
@@ -1079,5 +1124,182 @@ hr {
     /*Media queeries for phone number*/
 
 
+    @media(min-width:100px) {
 
        
+
+        .container .Container_Picture
+       
+        
+        {
+            display: flex;
+           
+            justify-content:center ;
+            align-items: center;
+            width: 100%;
+        }   
+
+        
+
+
+        .container .Container_Picture .profession .bouton_Message {
+
+            position:relative;
+            left:4px;
+        }
+
+        .container .Container_Picture .dark_mode{
+
+            position:relative;
+            left:40px;
+        }
+
+        .container .Container_Picture .dark_mode #Bouton_sombre{
+
+                display:none;
+            }
+
+        .container .container_Paragraphe_Introduction {
+            width: 125%;
+          position: relative;
+          right:40px;
+          text-align: center;
+          align-self: center;
+         
+        }
+
+        
+        .dark{
+            display:true;
+        }
+
+    }
+       
+    
+
+/* MEDIA QUERRIE VERSION ANGLAIS HTML */
+
+@media(max-width: 700px) {
+
+    .Image_Anglais .container .Container_Picture
+        
+    {
+       
+        position:relative;
+        left:25px;
+        justify-content:center ;
+        align-items: center;
+        width: 100%;
+    }   
+
+    
+    .Image_Anglais .container .Container_Picture{
+
+        display: flex;
+        flex-direction: column;
+    }
+  
+    .Image_Anglais .container .Container_Picture .anglais
+    {
+
+        position:relative;
+        right:35px
+    }
+
+   
+    .Image_Anglais .container .Container_Picture .profession .bouton_Message{
+
+       display:none;
+       
+    }
+    .container .Container_Picture .profession .anglais
+    
+    {
+       position:relative;
+       left:166px;
+        font-size: 25px;
+    }
+    .Image_Anglais .container .Container_Picture .profession .profession_Anglais
+    {
+       position:relative;
+     left:166px;
+        font-size: 25px;
+    }
+
+    .container .Container_Picture .profession .profession_Name
+    {
+       position:relative;
+       left:0px;
+        font-size: 25px;
+    }
+    .Image_Anglais {
+        background-image: url("/Images/carldolce_1.png");
+        background-color: #cccccc;
+        height: 500px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+
+}
+
+
+@media(min-width:760px) {
+
+    .Image_Anglais .container .Container_Picture
+        
+    {
+       display:flex;
+        position:relative;
+        width:100%;
+        justify-content:center ;
+        align-items: center;
+        
+        left:10px;
+       bottom:75px;
+        
+    }   
+
+    .Image_Anglais .container .Container_Picture .profession .bouton_Message{
+
+        position:relative;
+        margin-right: 25px;
+        left:45px;
+        
+    }
+   
+    .container .Container_Picture .profession .profession_Anglais
+    {
+       position:relative;
+       left:15px;
+        font-size: 25px;
+    }
+    .container .container_Paragraphe_Introduction {
+        width: 80%;
+       position:relative;
+       left:11%;
+        
+    }
+
+   
+    .container .container_Paragraphe_Introduction .Container_CV{
+
+        position:relative;
+        left:4%;
+        margin:10px;
+   
+}
+}
+
+@media(min-width:960px) {
+
+    .container .container_Paragraphe_Introduction .Container_CV{
+
+        position:relative;
+        left:35%;
+        margin:10px;
+   
+}
+
+}

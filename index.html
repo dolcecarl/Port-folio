@@ -35,7 +35,8 @@
                     <li><a href="#Expérience">Expériences </a></li>
                     <li><a href="#Competences">Compétences</a></li>
                     <li><a href="#Contacts">Contacts</a></li>
-                    <li><a href="index_Anglais.html" id="En_Fr_Language"><i class="fa fa-globe" aria-hidden="true"></i>&ensp;EN</a>
+                    <li><a href="index_Anglais.html" id="En_Fr_Language" title="Changer pour anglais"><i class="fa fa-globe" aria-hidden="true"></i>&ensp;EN</a>
+                        <li class="dark"><a><i class="fa fa-moon-o" aria-hidden="true" onclick="turnToDark()" title="Mode sombre"></i></a></li>
                           
                      </li>
                 </ul>
@@ -100,9 +101,9 @@
                                 Cegep de Rosemont.
                             </a>
                         </strong>
-                    </em>
+                    </em><br>
                     Je suis un étudiant en technique de l'informatique,passionné
-                    de la programmation et du développement Web. Je suis prêt à relever de nouveaux défis. Et à mettre en valeur mes compétences et mon savoir-faire acquis
+                    de la programmation et du développement Web.Je suis prêt à relever de nouveaux défis. Et à mettre en valeur mes compétences et mon savoir-faire acquis
                     tout au long de mes différents cheminements scolaires,à travers des travaux pratiques,des projets de fin de session et des séances de laboratoire et en stage.
                 </p>
                 <div class="Container_CV">
@@ -333,17 +334,17 @@
                     <form action="mailto:" method="post" name="myForm" onsubmit="readySubmit()">
                         <h2> Envoie moi un message</h2>
                         <div class="inputBox">
-                            <input type="text" name="nom" onfocusout="displayErreurInput()"  onfocusin="changeColorInput()" id="colorOnFocus"/>
+                            <input type="text" name="nom" onfocusout="displayErreurInput()"  onfocusin="changeColorInput()" class ="colorOnFocus"/>
                             <span> Votre nom</span>
                             <p id="message_Erreur"></p>
                         </div>
                         <div class="inputBox">
-                            <input type="text" name="email" onfocusout="displayErrorEmailInput()" id ="colorOnFocus" onfocusin="changeColorInput()"/>
+                            <input type="text" name="email" onfocusout="displayErrorEmailInput()"  onfocusin="changeColorInput()" class ="colorOnFocus" />
                             <span> Email</span>
                             <p id="erreur_Mail"></p>
                         </div>
                         <div class="inputBox">
-                            <textarea name="txtarea" onfocusout="validateMessage()"></textarea>
+                            <textarea name="txtarea" onfocusout="validateMessage()" onfocusin="changeColorInput()" class ="colorOnFocus"></textarea>
 
                             <span> Votre message...</span>
                             <p id="message"></p>
